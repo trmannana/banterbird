@@ -15,7 +15,7 @@ def get_posts():
 
 @app.route('/api/posts', methods=['POST'])
 def add_post():
-    new_post = request.get_json9()
+    new_post = request.get_json()
     with (open("data.json", "r")) as file:
         posts = json.load(file)
         posts.insert(0, new_post)
