@@ -47,3 +47,9 @@ window.onload = async() => {
         console.error("Error fetching posts", error);
     }
 }
+function toggleMode() {
+    const body = document.body;
+    const button = document.getElementById("modeToggle");
+    const isDark = body.classList.toggle("dark-mode");
+    button.innerText = isDark ? "Light Mode" : "Dark Mode";
+}

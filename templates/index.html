@@ -3,9 +3,21 @@
 <head>
     <title>Banterbird</title>
     <script src="/static/js/app.js" defer></script>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <h1>Banterbird</h1>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1 style="margin: 0;">Banterbird</h1>
+        <button id="modeToggle" onclick="toggleMode()" style="
+            padding: 6px 12px;
+            border: none;
+            background-color: #1da1f2;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        ">Dark Mode</button>
+    </div>
+    
     <div>
         Logged in as: <strong id="username">admin</strong>
     </div>
@@ -20,9 +32,11 @@
 
     <template id="post-template">
         <div class="post">
-            <p><strong class="username"></strong>: <span class="message"></span></p>
-            <small class="timestamp"></small>
-            <hr>
+            <img class="profile-pic" src="https://i.ytimg.com/vi/42zBWAuEeO4/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgVChLMA8=&rs=AOn4CLARaTPP5WDKZITPOBidqCVIBbwe5g" alt="Profile Picture">
+            <div class="post-content">
+                <p><strong class="username"></strong>: <span class="message"></span></p>
+                <small class="timestamp"></small>
+            </div>
         </div>
     </template>
 </body>

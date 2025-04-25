@@ -1,0 +1,90 @@
+/* Base styling (light mode by default) */
+
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+}
+
+h1, h3 {
+    color: inherit;
+}
+
+#feed {
+    margin-top: 30px;
+}
+
+.post {
+    background-color: #f0f0f0;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-content {
+    flex-grow: 1;
+}
+
+textarea#postInput {
+    width: 100%;
+    min-height: 60px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+}
+
+button {
+    margin-top: 8px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #1da1f2;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0d8ddb;
+}
+
+small.timestamp {
+    display: block;
+    color: #555;
+    margin-top: 4px;
+    font-size: 0.8em;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    background-color: #000;
+    color: white;
+}
+
+body.dark-mode textarea#postInput {
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+}
+
+body.dark-mode .post {
+    background-color: #111;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode small.timestamp {
+    color: #aaa;
+}
